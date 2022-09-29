@@ -4,6 +4,77 @@
     <meta charset='utf-8'>
     <title>CSS Stylovanie</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: green;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+        th::first-letter {
+            color: yellow;
+
+        }
+        tr:nth-child(odd) {
+            background-color: lightgrey;
+        }
+        td:nth-child(2) {
+            text-transform: uppercase;
+        }
+        tr:hover {
+            background-color: grey;
+        }
+       tr:hover td:nth-child(n+4):not(td:nth-child(n+7)){
+            text-align: center;
+        }
+        tr:hover td:first-child {
+            color: red;
+            border-color: black;
+        }
+        tr td:first-child:hover {
+            color: black;
+        }
+
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7))
+        {
+            background-color: lightblue;
+        }
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7)):hover{
+            background-color: green;
+        }
+
+        tr:hover td:nth-child(n+4):not(td:nth-child(n+7)):hover ~ td:not(td:nth-child(n+7))
+        {
+            background-color: orange;
+        }
+        th:nth-child(7), tr td:nth-child(7) {
+            display: none;
+        }
+
+
+        a[href*= "http"] {
+            color: red;
+        }
+        a[href*= "https"]{
+            color: green;
+        }
+        a {
+            color: blue;
+        }
+        a[href$=".pdf"]:after {
+            content: "(PDF)";
+        }
+
+
+    </style>
 </head>
 <body>
     <table class="data">
